@@ -1,0 +1,3 @@
+interface Desplazamiento {
+  void mostrarKilometrosRecorridos();
+}
