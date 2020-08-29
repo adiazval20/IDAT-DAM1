@@ -32,6 +32,7 @@ public class PostAdapter extends ArrayAdapter<Post> {
         TextView txtSubtitulo = convertView.findViewById(R.id.txtSubtitulo);
         ImageView imgPost = convertView.findViewById(R.id.imgPost);
         TextView txtMensaje = convertView.findViewById(R.id.txtMensaje);
+        ImageView imgIcono = convertView.findViewById(R.id.imgIcono);
 
         Post post = getItem(position);
 
@@ -39,6 +40,7 @@ public class PostAdapter extends ArrayAdapter<Post> {
         txtSubtitulo.setText(post.getSubTitulo());
         imgPost.setImageResource(post.getImagen());
         txtMensaje.setText(post.getMensaje());
+        imgIcono.setImageResource(post.getIcono());
 
         return convertView;
     }

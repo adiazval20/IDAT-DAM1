@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -32,8 +31,8 @@ public class PostsActivity extends AppCompatActivity {
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
 
         List<Post> posts = new ArrayList<>();
-        posts.add(new Post(1, "Iphone", "29/08/2020", R.drawable.iphone, "Esta es una publicación"));
-        posts.add(new Post(2, "Samsung", "28/08/2020", R.drawable.samsung2, "Esta es otra publicación"));
+        posts.add(new Post(1, "Iphone", "29/08/2020", R.drawable.iphone, "Esta es una publicación", R.drawable.chat));
+        posts.add(new Post(2, "Samsung", "28/08/2020", R.drawable.samsung2, "Esta es otra publicación", R.drawable.logo));
 
         PostAdapter adapter = new PostAdapter(this, R.layout.item_post, posts);
 

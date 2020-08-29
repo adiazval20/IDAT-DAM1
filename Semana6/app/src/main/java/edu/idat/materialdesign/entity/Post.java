@@ -6,16 +6,18 @@ public class Post {
     private String subTitulo;
     private int imagen;
     private String mensaje;
+    private int icono;
 
     public Post() {
     }
 
-    public Post(int id, String titulo, String subTitulo, int imagen, String mensaje) {
+    public Post(int id, String titulo, String subTitulo, int imagen, String mensaje, int icono) {
         this.id = id;
         this.titulo = titulo;
         this.subTitulo = subTitulo;
         this.imagen = imagen;
         this.mensaje = mensaje;
+        this.icono = icono;
     }
 
     public int getId() {
@@ -56,5 +58,13 @@ public class Post {
 
     public void setMensaje(String mensaje) {
         this.mensaje = mensaje;
+    }
+
+    public int getIcono() {
+        return icono;
+    }
+
+    public void setIcono(int icono) {
+        this.icono = icono;
     }
 }
