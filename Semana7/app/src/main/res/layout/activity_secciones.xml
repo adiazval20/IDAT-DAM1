@@ -14,10 +14,11 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-        <ListView
-            android:id="@+id/lsvSecciones"
+        <GridView
+            android:id="@+id/grvSecciones"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:numColumns="2" />
     </ScrollView>
 
 </LinearLayout>
