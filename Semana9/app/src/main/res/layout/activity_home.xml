@@ -15,37 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txtTitulo"
+        <FrameLayout
+            android:id="@+id/frmContenedor"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:text="Pantalla de Inicio"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:textStyle="bold"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bnvMenu"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imgInicio"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:adjustViewBounds="true"
-            android:src="@drawable/contacto"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="Descripción de pantalla de inicio"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="italic"
-            app:layout_constraintTop_toBottomOf="@id/imgInicio" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnvMenu"

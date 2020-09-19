@@ -11,6 +11,11 @@
         android:title="Productos" />
 
     <item
+        android:id="@+id/optArticulos"
+        android:icon="@drawable/ic_baseline_list_alt_24"
+        android:title="Artículos" />
+
+    <item
         android:id="@+id/optUbicacion"
         android:icon="@drawable/ic_baseline_location_on_24"
         android:title="Ubicación" />

@@ -2,6 +2,9 @@ package edu.idat.materialdesign;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,6 +20,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        loadFragment(new InicioFragment());
+
         final Context context = this;
         BottomNavigationView bnvMenu = findViewById(R.id.bnvMenu);
         bnvMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -24,17 +29,29 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.optInicio:
-                        Toast.makeText(context, "INICIO", Toast.LENGTH_SHORT).show();
+                        loadFragment(new InicioFragment());
                         break;
                     case R.id.optProductos:
-                        Toast.makeText(context, "PRODUCTOS", Toast.LENGTH_SHORT).show();
+                        loadFragment(new ProductosFragment());
+                        break;
+                    case R.id.optArticulos:
+                        loadFragment(new ArticulosFragment());
                         break;
                     case R.id.optUbicacion:
-                        Toast.makeText(context, "UBICACIÓN", Toast.LENGTH_SHORT).show();
+                        loadFragment(new UbicacionFragment());
                         break;
                 }
-                return false;
+                return true;
             }
         });
+    }
+
+    private void loadFragment(Fragment fragment) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+        transaction.replace(R.id.frmContenedor, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }
