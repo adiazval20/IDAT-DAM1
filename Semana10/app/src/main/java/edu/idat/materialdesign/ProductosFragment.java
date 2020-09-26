@@ -1,5 +1,6 @@
 package edu.idat.materialdesign;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,7 +19,7 @@ import java.util.List;
 import edu.idat.materialdesign.adapter.ProductoAdapter;
 import edu.idat.materialdesign.entity.Producto;
 
-public class ProductosFragment extends Fragment {
+public class ProductosFragment extends Fragment implements IComunicacion {
     public ProductosFragment() {
         // Required empty public constructor
     }
@@ -40,7 +41,13 @@ public class ProductosFragment extends Fragment {
         productos.add(new Producto(2, "Samsung", "Descripción de producto Samsung", R.drawable.samsung2, 2500));
         productos.add(new Producto(3, "Otro Samsung", "Descripción de otro producto Samsung", R.drawable.samsung2, 2500));
 
-        ProductoAdapter adapter = new ProductoAdapter(productos);
+        ProductoAdapter adapter = new ProductoAdapter(productos, this);
         rcvProductos.setAdapter(adapter);
+    }
+
+    @Override
+    public void cargarActividad(Class<?> actividad) {
+        Intent intent = new Intent(getContext(), actividad);
+        startActivity(intent);
     }
 }
