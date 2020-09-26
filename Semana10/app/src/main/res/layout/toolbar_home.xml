@@ -9,10 +9,10 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-            app:menu="@menu/menu"
             app:navigationIcon="@drawable/ic_baseline_menu_24"
             app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
             app:title="Bienvenido!" />
