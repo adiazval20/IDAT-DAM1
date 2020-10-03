@@ -25,4 +25,5 @@ task clean(type: Delete) {
 
 ext {
     material = '1.2.0'
+    circleimageview = '2.1.0'
 }

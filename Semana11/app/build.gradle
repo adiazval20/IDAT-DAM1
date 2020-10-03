@@ -33,4 +33,7 @@ dependencies {
 
     // MATERIAL DESIGN
     implementation "com.google.android.material:material:$project.material"
+
+    // OTRAS
+    implementation "de.hdodenhof:circleimageview:$project.circleimageview"
 }
