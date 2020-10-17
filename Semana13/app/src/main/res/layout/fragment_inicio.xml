@@ -10,7 +10,7 @@
         android:id="@+id/txtTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="Pantalla de Inicio"
         android:textAlignment="center"
         android:textSize="30sp"

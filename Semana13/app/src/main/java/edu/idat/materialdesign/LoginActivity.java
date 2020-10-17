@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(context, SeccionesActivity.class));
+                startActivity(new Intent(context, HomeActivity.class));
             }
         });
     }
