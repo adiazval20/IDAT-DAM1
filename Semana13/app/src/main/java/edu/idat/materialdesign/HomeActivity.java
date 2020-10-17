@@ -72,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
     private void loadFragment(Fragment fragment) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+        transaction.setCustomAnimations(R.anim.move_left_right_in, R.anim.move_left_right_out);
         transaction.replace(R.id.frmContenedor, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
