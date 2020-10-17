@@ -60,7 +60,7 @@ public class ProductosFragment extends Fragment implements IComunicacion {
         spCategorias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(), categorias.get(position).getNombre(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(getContext(), categorias.get(position).getNombre(), Toast.LENGTH_LONG).show();
             }
 
             @Override
