@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         posicionesMenu.put(R.id.optProductos, 1);
         posicionesMenu.put(R.id.optArticulos, 2);
         posicionesMenu.put(R.id.optUbicacion, 3);
+        posicionesMenu.put(R.id.optAnimaciones, 4);
 
         posicionActual = posicionesMenu.get(R.id.optInicio);
 
@@ -78,6 +79,9 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.optUbicacion:
                 fragment = new UbicacionFragment();
+                break;
+            case R.id.optAnimaciones:
+                fragment = new AnimacionesFragment();
                 break;
         }
 

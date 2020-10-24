@@ -19,4 +19,9 @@
         android:id="@+id/optUbicacion"
         android:icon="@drawable/ic_baseline_location_on_24"
         android:title="Ubicación" />
+
+    <item
+        android:id="@+id/optAnimaciones"
+        android:icon="@drawable/ic_baseline_3d_rotation_24"
+        android:title="Animaciones" />
 </menu>
