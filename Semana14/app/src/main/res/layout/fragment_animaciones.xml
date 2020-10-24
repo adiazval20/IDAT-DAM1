@@ -1,14 +1,335 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".AnimacionesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animaciones en Android!"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTituloX"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Desplazamiento horizontal"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/hrX"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/cardview_shadow_start_color"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTituloX" />
+
+                <ImageView
+                    android:id="@+id/imgAnimX"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/compass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hrX" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInicioX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Izquierda"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgAnimX"
+                    app:layout_constraintEnd_toStartOf="@+id/btnFinX"
+                    app:layout_constraintTop_toTopOf="@+id/imgAnimX" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFinX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Derecha"
+                    app:layout_constraintBottom_toBottomOf="@id/imgAnimX"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgAnimX" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTituloY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Desplazamiento vertical"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/hrY"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/cardview_shadow_start_color"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTituloY" />
+
+                <ImageView
+                    android:id="@+id/imgAnimY"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/compass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hrY" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInicioY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Abajo"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgAnimY"
+                    app:layout_constraintEnd_toStartOf="@+id/btnFinY"
+                    app:layout_constraintTop_toTopOf="@+id/imgAnimY" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFinY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arriba"
+                    app:layout_constraintBottom_toBottomOf="@id/imgAnimY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgAnimY" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTituloAlpha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Desvanecimiento"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/hrAlpha"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/cardview_shadow_start_color"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTituloAlpha" />
+
+                <ImageView
+                    android:id="@+id/imgAnimAlpha"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/compass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hrAlpha" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInicioAlpha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Ocultar"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgAnimAlpha"
+                    app:layout_constraintEnd_toStartOf="@+id/btnFinAlpha"
+                    app:layout_constraintTop_toTopOf="@+id/imgAnimAlpha" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFinAlpha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mostrar"
+                    app:layout_constraintBottom_toBottomOf="@id/imgAnimAlpha"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgAnimAlpha" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTituloRotation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rotación"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/hrRotation"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/cardview_shadow_start_color"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTituloRotation" />
+
+                <ImageView
+                    android:id="@+id/imgAnimRotation"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/compass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hrRotation" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInicioRotation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Izquierda"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgAnimRotation"
+                    app:layout_constraintEnd_toStartOf="@+id/btnFinRotation"
+                    app:layout_constraintTop_toTopOf="@+id/imgAnimRotation" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFinRotation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Derecha"
+                    app:layout_constraintBottom_toBottomOf="@id/imgAnimRotation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgAnimRotation" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:cardElevation="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/txtTituloCombinado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Animaciones combinadas"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/hrCombinado"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/cardview_shadow_start_color"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTituloCombinado" />
+
+                <ImageView
+                    android:id="@+id/imgAnimCombinado"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/compass"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hrCombinado" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInicioCombinado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Efecto 1"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgAnimCombinado"
+                    app:layout_constraintEnd_toStartOf="@+id/btnFinCombinado"
+                    app:layout_constraintTop_toTopOf="@+id/imgAnimCombinado" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFinCombinado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Efecto 2"
+                    app:layout_constraintBottom_toBottomOf="@id/imgAnimCombinado"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgAnimCombinado" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</ScrollView>
