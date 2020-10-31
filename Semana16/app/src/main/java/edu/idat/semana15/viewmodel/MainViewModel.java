@@ -22,4 +22,8 @@ public class MainViewModel extends AndroidViewModel {
     public LiveData<List<Persona>> listPersonas() {
         return personaRepository.list();
     }
+
+    public void savePersona(Persona persona) {
+        personaRepository.save(persona);
+    }
 }

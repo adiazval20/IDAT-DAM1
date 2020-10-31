@@ -21,4 +21,17 @@ public class PersonaRepository {
     public LiveData<List<Persona>> list() {
         return dao.list();
     }
+
+    public void save(Persona persona) {
+        AppDatabase.dbExecutor.execute(new Runnable() {
+            @Override
+            public void run() {
+                if (persona.getId() == 0) {
+                    dao.insert(persona);
+                } else {
+                    dao.update(persona);
+                }
+            }
+        });
+    }
 }

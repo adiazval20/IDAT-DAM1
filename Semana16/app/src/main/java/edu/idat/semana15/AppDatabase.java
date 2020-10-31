@@ -19,7 +19,7 @@ import edu.idat.semana15.entity.Persona;
 public abstract class AppDatabase extends RoomDatabase {
     private static volatile AppDatabase appDb;
     private static final int HILOS = 4;
-    private static final ExecutorService dbExecutor = Executors.newFixedThreadPool(HILOS);
+    public static final ExecutorService dbExecutor = Executors.newFixedThreadPool(HILOS);
 
     public abstract PersonaDao personaDao();
 
@@ -42,15 +42,14 @@ public abstract class AppDatabase extends RoomDatabase {
             dbExecutor.execute(new Runnable() {
                 @Override
                 public void run() {
-                    Persona juan = new Persona("Perez", "Díaz", "Juan");
-                    Persona maria = new Persona("Sanchez", "Cabrera", "María");
-                    Persona alberto = new Persona("Cárdenas", "Reyes", "Alberto");
-
-                    PersonaDao dao = appDb.personaDao();
-                    dao.insert(juan);
-                    dao.insert(maria);
-                    dao.insert(alberto);
-//                    dao.insertAll(juan, maria, alberto);
+//                    Persona juan = new Persona("Perez", "Díaz", "Juan");
+//                    Persona maria = new Persona("Sanchez", "Cabrera", "María");
+//                    Persona alberto = new Persona("Cárdenas", "Reyes", "Alberto");
+//
+//                    PersonaDao dao = appDb.personaDao();
+//                    dao.insert(juan);
+//                    dao.insert(maria);
+//                    dao.insert(alberto);
                 }
             });
         }
